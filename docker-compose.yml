@@ -1,0 +1,71 @@
+version: '3.8'
+
+volumes:
+  logs:
+  database:
+
+services:
+  redis-server:
+    container_name: redis-server
+    image: 'redis:7.2.3-alpine3.19'
+    networks:
+      - network
+    ports:
+      - ${BULL_REDIS_PORT}:${BULL_REDIS_PORT}
+
+  postgres:
+    build: ./database
+    image: nephrite-database-postgres
+    env_file:
+      - .env
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    restart: always
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - network
+
+  server:
+    build:
+      context: './server'
+    image: nephrite-server
+    env_file:
+      - .env
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    restart: on-failure
+    depends_on:
+      - redis-server
+      - postgres
+    volumes:
+      - logs:/usr/src/app/logs
+      - ./server/src:/usr/src/app/src
+    networks:
+      - network
+
+  client:
+    build:
+      context: './client'
+    image: nephrite-client
+    env_file:
+      - '.env'
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    restart: on-failure
+    depends_on:
+      - server
+    volumes:
+      - ./client/src:/usr/src/app/src
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge

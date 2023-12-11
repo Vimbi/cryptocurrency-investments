@@ -1,0 +1,32 @@
+{
+    "Products": "Products",
+    "News": "News",
+    "Academy": "Academy",
+    "News_Academy": "News and Academy",
+    "Contacts": "Contacts",
+    "Support": "Support",
+    "OpenOffice": "Open an office",
+    "ReferralProgram": "Referral program",
+    "Raffles": "Raffles",
+    "MyInvestments": "My investments",
+    "MyTeam": "My team",
+    "History": "History",
+    "Transfers": "Transfers",
+    "Accruals": "Accruals",
+    "Logout": "Logout",
+    "Replenishment": "Replenishment",
+    "Withdrawal": "Withdrawal",
+    "Profile": "Profile",
+    "Currencies": "Currencies",
+    "Networks": "Networks",
+    "Rates": "Rates",
+    "Clients": "Clients",
+    "PercentageSettings": "Setting up percentages",
+    "Articles": "Articles",
+    "OpeningOffices": "Opening of offices",
+    "accrual": {
+        "me": "My referrals",
+        "referral": "Referral Income"
+    },
+    "TransferToUser": "Transfer to the user"
+}

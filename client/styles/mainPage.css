@@ -1,0 +1,310 @@
+.main-banner {
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: 300% -10%;
+	position: relative;
+}
+.main-banner .width-wrapper {
+	width: 50%;
+	padding: 1.5rem 0;
+}
+.main-banner .container {
+	position: relative;
+	z-index: 10;
+}
+.coins {
+	z-index: 1;
+	position: absolute;
+	right: 0;
+	bottom: -12.25rem;
+	width: 45rem;
+	height: 45rem;
+}
+.text-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 2rem;
+}
+.btns-wrapper {
+	display: grid;
+	grid-template-columns: fit-content(100%) fit-content(100%);
+	grid-gap: 20px;
+	margin-bottom: 10rem;
+}
+
+.main-banner .numbers {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 3.5rem;
+}
+
+.numbers__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1rem;
+}
+.numbers__card p {
+	/* color: #898989;
+	font-size: 1rem;
+	line-height: 1.25rem; */
+	margin: 0;
+}
+/* .numbers__card span {
+	color: #3a3541;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 2.25rem;
+} */
+.main-banner_bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-top: 0.75rem;
+}
+.banner-gap {
+	margin-top: 120px;
+}
+.card-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+.card-grid p {
+	word-break: break-word;
+}
+.card-grid .card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 4rem;
+}
+.card-grid .large-grid-card {
+	grid-row: span 2;
+}
+.banner-two {
+	background-repeat: no-repeat;
+	background-position: -550px -25px;
+	padding: 7.5rem 0;
+}
+.grid-two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+.grid-two__top {
+	grid-column: span 2;
+}
+.grid-two img {
+	width: 100%;
+	object-fit: none;
+	grid-row: span 2;
+}
+.grid-two button {
+	margin-top: 2rem;
+	order: 2;
+}
+.faq-wrapper {
+	display: flex;
+	align-items: center;
+}
+.teamAdvertisingBanner {
+	position: relative;
+	overflow: hidden;
+}
+.teamAdvertisingBanner::before,
+.teamAdvertisingBanner::after {
+	content: '';
+	position: absolute;
+	width: 23rem;
+	height: 23rem;
+	background-image: url('/images/coins.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.teamAdvertisingBanner::before {
+	left: -100px;
+}
+.teamAdvertisingBanner::after {
+	right: -100px;
+	transform: rotate(90deg);
+}
+@media (max-width: 1440px) {
+	.main-banner {
+		background-size: auto;
+		background-position: 350% -30%;
+	}
+	.coins {
+		right: -132px;
+	}
+}
+@media (max-width: 1240px) {
+	.main-banner {
+		background-position: 600% -50%;
+	}
+	.teamAdvertisingBanner::before {
+		left: -200px;
+	}
+	.teamAdvertisingBanner::after {
+		right: -200px;
+	}
+}
+@media (max-width: 1160px) {
+	.main-banner {
+		background-position: -100% -50%;
+	}
+	.coins {
+		right: -100px;
+		width: 32rem;
+		height: 32rem;
+	}
+	.main-banner .width-wrapper {
+		width: 100%;
+	}
+	.main-banner .numbers {
+		width: 50%;
+	}
+	.text-wrapper {
+		gap: 2rem;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.card-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 1.25rem;
+	}
+	.card-grid .card {
+		gap: 3.5rem;
+	}
+	.card-grid .large-grid-card {
+		grid-row: span 1;
+		grid-column: span 2;
+		order: 1;
+	}
+	.banner-two {
+		padding: 5rem 0;
+	}
+	.faq-wrapper img {
+		width: 18.5rem;
+		height: auto;
+	}
+}
+@media (max-width: 768px) {
+	.text-wrapper {
+		flex-direction: column;
+	}
+	.main-banner {
+		background-size: 100%;
+		background-position: 0% 170%;
+	}
+	.coins {
+		right: -224px;
+		width: 26rem;
+		height: 26rem;
+	}
+	.main-banner .numbers {
+		width: 70%;
+	}
+	.btns-wrapper {
+		margin-bottom: 6.875rem;
+	}
+	.banner-gap {
+		margin-top: 80px;
+	}
+	.teamAdvertisingBanner::before,
+	.teamAdvertisingBanner::after {
+		display: none;
+	}
+}
+@media (max-width: 640px) {
+	.main-banner {
+		background-position: 0% 160%;
+	}
+	.text-wrapper {
+		gap: 20px;
+	}
+	.card-grid {
+		gap: 0.5rem;
+	}
+	.card-grid .card {
+		gap: 3rem;
+	}
+	.banner-two {
+		padding: 2.5rem 0;
+	}
+	.grid-two {
+		grid-template-columns: 1fr;
+	}
+	.grid-two__top {
+		grid-column: span 1;
+	}
+	.grid-two img {
+		object-fit: cover;
+		grid-row: span 1;
+		order: 1;
+	}
+	.faq-wrapper {
+		flex-direction: column;
+	}
+	.faq-wrapper img {
+		width: 24rem;
+	}
+}
+@media (max-width: 600px) {
+	.btns-wrapper {
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		margin-bottom: 3.75rem;
+	}
+	.main-banner {
+		background-position: 0% 150%;
+	}
+	.btns-wrapper button {
+		width: 100%;
+	}
+	.main-banner .numbers {
+		grid-template-columns: 1fr;
+	}
+	.coins {
+		bottom: -200px;
+	}
+}
+@media (max-width: 520px) {
+	.main-banner {
+		background-position: 0% 130%;
+	}
+}
+@media (max-width: 480px) {
+	.main-banner {
+		background-position: 0% 130%;
+	}
+	.coins {
+		bottom: -162px;
+		right: -125px;
+		width: 21rem;
+		height: 21rem;
+	}
+}
+@media (max-width: 420px) {
+	.main-banner {
+		background-position: 0% 110%;
+	}
+	.coins {
+		right: -172px;
+	}
+}
+@media (max-width: 380px) {
+	.coins {
+		right: -224px;
+	}
+}
+@media (max-width: 320px) {
+	.coins {
+		right: -240px;
+	}
+}

@@ -1,0 +1,32 @@
+{
+    "Products": "Продукты",
+    "News": "Новости",
+    "Academy": "Академия",
+    "News_Academy": "Новости и Академия",
+    "Contacts": "Контакты",
+    "Support": "Поддержка",
+    "OpenOffice": "Открыть офис",
+    "ReferralProgram": "Реферальная программа",
+    "Raffles": "Розыгрыши",
+    "MyInvestments": "Мои инвестиции",
+    "MyTeam": "Моя команда",
+    "History": "История",
+    "Transfers": "Переводы",
+    "Accruals": "Начисления",
+    "Logout": "Выход",
+    "Replenishment": "Пополнить счет",
+    "Withdrawal": "Вывод средств",
+    "Profile": "Профиль",
+    "Currencies": "Валюты",
+    "Networks": "Сети",
+    "Rates": "Тарифы",
+    "Clients": "Клиенты",
+    "PercentageSettings": "Настройка процентов",
+    "Articles": "Статьи",
+    "OpeningOffices": "Открытие офисов",
+    "accrual": {
+        "me": "Мои рефералы",
+        "referral": "Доход от рефералов"
+    },
+    "TransferToUser": "Перевод пользователю"
+}

@@ -1,0 +1,23 @@
+{
+    "MyInvestments": "My investments",
+    "TotalInvest": "Accrued funds for all time",
+    "TotalFunds": "Total funds on balance",
+    "FirstInvest": "Select a rate for your first investment.",
+    "InvestCancelSuccess": "The investment was successfully canceled",
+    "InvestCancelFailure": "Investment cancellation error",
+    "InvestCancelMessage": "Do you really want to cancel the investment? If 90 days have not passed since the opening of the investment, then when you return the funds, a fine of 13% of the amount will be deducted from you and no interest will be accrued for the entire period of the investment",
+    "NoActiveInvest": "You do not have an active investment. Refill your wallet",
+    "FundsManagement": "Funds management",
+    "AvailableWithdrawal": "Available for withdrawal (balance)",
+    "CurrentBalance": "Current balance",
+    "MyTarif": "My rate",
+    "MyTarifCard1": "You can improve your rate by paying extra from your balance",
+    "MyTarifCard2": "Select a rate for your investment",
+    "CreateInvestTitle": "Investment amount",
+    "CreateInvestNew": "Enter the amount to top up within the selected tariff",
+    "CreateInvestReplenish": "Enter the desired amount that will be debited from your balance and transferred to the investment account",
+    "finesCount": "Fines count",
+    "finesAmount": "Fines amount",
+    "ChangeTarifAgree": "the terms of the tariff changes.",
+    "TarifChangesNotification": "The replenishment of the investment may result in a tariff change. When switching to certain tariffs, the end date of the investment changes. See the tariff description for details."
+}
