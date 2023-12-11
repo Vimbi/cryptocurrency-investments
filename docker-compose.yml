@@ -5,8 +5,7 @@ volumes:
   database:
 
 services:
-  redis-server:
-    container_name: redis-server
+  nephrite-redis-server:
     image: 'redis:7.2.3-alpine3.19'
     networks:
       - network
@@ -15,19 +14,17 @@ services:
 
   postgres:
     build: ./database
-    image: nephrite-database-postgres
     env_file:
       - .env
     ports:
-      - 5432:5432
-    expose:
-      - 5432
+      - ${DATABASE_PORT}:${DATABASE_PORT}
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: ${DATABASE_NAME}
     restart: always
     volumes:
+      - './database:/docker-entrypoint-initdb.d'
       - database:/var/lib/postgresql/data
     networks:
       - network
@@ -42,7 +39,7 @@ services:
       - ${APP_PORT}:${APP_PORT}
     restart: on-failure
     depends_on:
-      - redis-server
+      - nephrite-redis-server
       - postgres
     volumes:
       - logs:/usr/src/app/logs
