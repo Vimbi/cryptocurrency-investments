@@ -1,0 +1,1 @@
+pg_restore --no-privileges --no-owner --single-transaction -d nephrite_docker_postgres nephrite_test_dump.sql
